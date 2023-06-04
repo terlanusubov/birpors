@@ -26,7 +26,7 @@ jobs:
         run: dotnet build Birpors.API --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Birpors.API -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish Birpors.API/Birpors.API.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

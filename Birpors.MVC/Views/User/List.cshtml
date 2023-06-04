@@ -1,0 +1,125 @@
+﻿@model Birpors.MVC.ViewModels.UserViewModel
+@using Birpors.Domain.Enums
+<div class="row" id="cancel-row">
+
+    <div class="col-xl-12 col-lg-12 col-sm-12 layout-spacing">
+        <div class="widget-content widget-content-area br-6">
+            <div class="table-responsive mb-4 mt-4">
+                <table class="table">
+                  @*  <tbody class="d-flex">
+                        <tr>
+                            <td style="display:block;">Ad</td>
+                            <td><input type="text" id="name" class="form-control" name="min"></td>
+                        </tr>
+                        <tr>
+                            <td style="display:block;">Soyad</td>
+                            <td><input type="text" id="surname" class="form-control" name="max"></td>
+                        </tr>
+                        <tr>
+                            <td style="display:block;">E-poçt</td>
+                            <td><input type="text" id="email" class="form-control" name="max"></td>
+                        </tr>
+                        <tr>
+                            <td style="display:block;">Rol</td>
+                            <td><input type="text" id="role" class="form-control" name="max"></td>
+                        </tr>
+                        <tr>
+                            <td style="display:block;">Status</td>
+                            <td><input type="text" id="status" class="form-control" name="max"></td>
+                        </tr>
+                    </tbody>*@
+                </table>
+                <table id="range-search" class="display table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th>E-poçt</th>
+                            <th>Rol</th>
+                            <th>Status</th>
+                            <th class="text-center">Parameterlər</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Users)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Surname</td>
+                                <td>@item.Email</td>
+                                <td>@item.RoleName</td>
+                                <td>
+                                    @if (item.StatusId == (byte)UserStatusEnum.Active)
+                                    {
+                                        <span class="badge badge-success"> Aktiv </span>
+                                    }
+                                    else if (item.StatusId == (byte)UserStatusEnum.Deactive)
+                                    {
+                                        <span class="badge badge-danger"> Deaktiv </span>
+                                    }
+                                </td>
+                                <td class="text-center"><a href="@Url.Action("Detail","User",new  { userId = item.Id })"><button class="btn btn-primary mb-4 mr-2 btn-sm">Ətraflı</button></a></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th>E-poçt</th>
+                            <th>Status</th>
+                            <th class="text-center">Parameterlər</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Links {
+    <link rel="stylesheet" type="text/css" href="~/staticfiles/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/staticfiles/plugins/table/datatable/dt-global_style.css">
+}
+@section Scripts{
+
+    <script>/* Custom filtering function which will search data in column four between two values */
+        //$.fn.dataTable.ext.search.push(
+        //    function (settings, data, dataIndex) {
+        //        var name = parseInt($('#min').val(), 10);
+        //        var surname = parseInt($('#max').val(), 10);
+        //        var email = "";
+        //        var role = "";
+        //        var status = "";
+
+        //        //var age = parseFloat(data[3]) || 0; // use data for the age column
+
+        //        //if ((isNaN(min) && isNaN(max)) ||
+        //        //    (isNaN(min) && age <= max) ||
+        //        //    (min <= age && isNaN(max)) ||
+        //        //    (min <= age && age <= max)) {
+        //        //    return true;
+        //        //}
+        //        return false;
+        //    }
+        //);
+        $(document).ready(function () {
+            var table = $('#range-search').DataTable({
+                "oLanguage": {
+                    "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                    "sInfo": "Göstərilən səhifə _PAGE_ / _PAGES_",
+                    "sLengthMenu": "Nəticə :  _MENU_",
+                },
+                "stripeClasses": [],
+                "lengthMenu": [7, 10, 20, 50],
+                "pageLength": 7
+            });
+            // Event listener to the two range filtering inputs to redraw on input
+           // $('#name, #surname, #email, #role, #status').keyup(function () { table.draw(); });
+        });</script>
+}

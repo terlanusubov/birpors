@@ -1,0 +1,159 @@
+<mxfile host="app.diagrams.net" modified="2022-08-31T21:34:19.399Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="qO6CTWYRQDoK9UGHG9lI" version="20.2.7" type="gitlab">
+  <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
+    <mxGraphModel dx="1864" dy="1690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-96" target="MCw1D_mv6CFlvTPLHoJt-102" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-96" value="&lt;br&gt;&lt;br&gt;user" style="shape=actor;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-110" y="-30" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-99" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="720" y="630" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-102" target="MCw1D_mv6CFlvTPLHoJt-130" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNhIrDxcCAVVw-eQKs-v-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-102" target="zNhIrDxcCAVVw-eQKs-v-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MCw1D_mv6CFlvTPLHoJt-102" target="bDPV2ugcUWUQUNBI61dN-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-102" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.mobile;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="-107.5" y="70" width="35" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-108" target="MCw1D_mv6CFlvTPLHoJt-111" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.487;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-108" target="MCw1D_mv6CFlvTPLHoJt-121" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-108" value="if user has logged out then" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-177.5" y="340" width="175" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-111" target="MCw1D_mv6CFlvTPLHoJt-117" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-111" value="&lt;b&gt;/api/categories&lt;br&gt;&lt;/b&gt;&lt;br&gt;Get all categories" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="375" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.473;entryY=-0.044;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-117" target="MCw1D_mv6CFlvTPLHoJt-119" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="546.5" y="881" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-117" value="&lt;b&gt;/api/products?productTypeId= &amp;amp; categoryId =&lt;/b&gt;&lt;br&gt;&lt;br&gt;productTypeId - ProductTypeEnum.Discount (10), ProductTypeEnum.Popular (20)&lt;br&gt;&lt;br&gt;categoryId - Get Products by specified category&lt;br&gt;&lt;br&gt;if neither productTypeId nor categoryId sent then all products gonna be back" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="531" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-119" value="&lt;b&gt;/api/orders/current&lt;br&gt;&lt;/b&gt;&lt;br&gt;Make get request to this api in per second&lt;br&gt;because of to know if user has order and its status" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="199" y="851" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-121" target="MCw1D_mv6CFlvTPLHoJt-123" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-121" value="&lt;b&gt;/api/account/otp&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post request to this api in order to get OTP message&lt;br&gt;&lt;br&gt;Body :&amp;nbsp;&lt;br&gt;&lt;i&gt;string PhoneNumber (not null)&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-185" y="561" width="195" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-123" target="MCw1D_mv6CFlvTPLHoJt-125" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="278.75" y="1371" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-123" value="&lt;b&gt;/api/account/verify-otp&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post request to this api in order to make verification for OTP&lt;br&gt;&lt;br&gt;Body:&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;i&gt;string Code&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string PhoneNumber&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;byte RoleId (User 10, Cook 20)&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string UserDeviceId (Unique key for device)&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-228.75" y="840" width="282.5" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-125" target="xnCjZg6ty4kNd33rirfu-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-125" value="&lt;b&gt;/api/account/login&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;Post request in order to login&lt;br&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; string PhoneNumber&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string UserDeviceId&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string SecretKey&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-188" y="1150" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MCw1D_mv6CFlvTPLHoJt-130" target="MCw1D_mv6CFlvTPLHoJt-108" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-130" value="&lt;h1&gt;User login register&lt;/h1&gt;&lt;p&gt;If user wants to login or register this process happens&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-185" y="180" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MCw1D_mv6CFlvTPLHoJt-141" value="&lt;b&gt;/api/users/{userId}&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post request to this api in order to update name , surname , email&lt;br&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp;string Name&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string Surname&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; string Email&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="64" y="1350" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-4" value="&lt;b&gt;/api/users/address&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post request to this api in order to add address&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="445" y="1350" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xnCjZg6ty4kNd33rirfu-5" target="MCw1D_mv6CFlvTPLHoJt-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xnCjZg6ty4kNd33rirfu-5" target="xnCjZg6ty4kNd33rirfu-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-5" value="if user has not filled profile" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1167.5" width="158" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xnCjZg6ty4kNd33rirfu-8" target="xnCjZg6ty4kNd33rirfu-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xnCjZg6ty4kNd33rirfu-8" target="MCw1D_mv6CFlvTPLHoJt-111" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xnCjZg6ty4kNd33rirfu-8" value="if user has not filled address" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="504" y="1163" width="172" height="102.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zNhIrDxcCAVVw-eQKs-v-1" target="bDPV2ugcUWUQUNBI61dN-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zNhIrDxcCAVVw-eQKs-v-1" target="bDPV2ugcUWUQUNBI61dN-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zNhIrDxcCAVVw-eQKs-v-1" target="bDPV2ugcUWUQUNBI61dN-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNhIrDxcCAVVw-eQKs-v-1" value="&lt;h1&gt;Order processes&lt;/h1&gt;&lt;div&gt;All order processes&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="98" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-1" value="&lt;b&gt;/api/orders&lt;br&gt;&lt;/b&gt;&lt;br&gt;Post request to make an order" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bDPV2ugcUWUQUNBI61dN-2" target="bDPV2ugcUWUQUNBI61dN-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-2" value="Add product to basket&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="75" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-7" value="&lt;b&gt;/api/orders&lt;br&gt;&lt;/b&gt;&lt;br&gt;In order to get Orders send GET request to this API" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="121.5" y="-185" width="143" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bDPV2ugcUWUQUNBI61dN-9" target="bDPV2ugcUWUQUNBI61dN-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-9" value="&lt;h1&gt;User profile processes&lt;/h1&gt;&lt;div&gt;All user profile processes&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-430" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bDPV2ugcUWUQUNBI61dN-11" target="bDPV2ugcUWUQUNBI61dN-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-11" value="Finished order&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="143" y="210" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-14" value="&lt;b&gt;/api/orders/{orderId}&lt;br&gt;&lt;/b&gt;&lt;br&gt;PUT request to this api&lt;br&gt;&lt;br&gt;int Rating&lt;br&gt;string RatingNote" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="177.5" width="143" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bDPV2ugcUWUQUNBI61dN-17" target="bDPV2ugcUWUQUNBI61dN-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-17" value="Clicked to cook" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-385" y="-70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bDPV2ugcUWUQUNBI61dN-19" value="&lt;b&gt;/api/users/{userId}/products&lt;/b&gt;&lt;br&gt;&lt;br&gt;in order to see cook products" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-424.12" y="-280" width="178.25" height="155" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

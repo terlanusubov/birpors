@@ -1,0 +1,646 @@
+﻿@using Birpors.MVC.ViewModels
+@using Birpors.Domain.Enums
+@model UserDetailVm
+<div class="widget-content widget-content-area animated-underline-content">
+
+    <ul class="nav nav-tabs  mb-3" id="animateLine" role="tablist">
+        @if(Model.UserDetail.RoleId == (byte)UserRoleEnum.User)
+        {
+            <li class="nav-item">
+            <a class="nav-link active" id="animated-underline-profile-tab" data-toggle="tab" href="#animated-underline-profile" role="tab" aria-controls="animated-underline-profile" aria-selected="false">Profil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="animated-underline-contact-tab" data-toggle="tab" href="#animated-underline-contact" role="tab" aria-controls="animated-underline-contact" aria-selected="false">Sifarişlər</a>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link active" id="animated-underline-profile-tab" data-toggle="tab" href="#animated-underline-profile" role="tab" aria-controls="animated-underline-profile" aria-selected="false">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="animated-underline-contact-tab" data-toggle="tab" href="#animated-underline-contact" role="tab" aria-controls="animated-underline-contact" aria-selected="false">Sifarişlər</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="animated-underline-kitchen-tab" data-toggle="tab" href="#animated-underline-kitchen" role="tab" aria-controls="animated-underline-contact" aria-selected="false">Mətbəx</a>
+            </li>
+        }
+        
+    </ul>
+
+    <div class="tab-content" id="animateLineContent-4">
+        <div class="tab-pane fade active show" id="animated-underline-profile" role="tabpanel" aria-labelledby="animated-underline-profile-tab">
+            <div class="media">
+                <img class="mr-3" src="@(Model.UserDetail.Image!=null?Model.UserDetail.Image:"/staticfiles/assets/img/90x90.jpg")" alt="Generic placeholder image">
+                <div class="media-body">
+                    <p>Ad: @Model.UserDetail.Name </p>
+                    <p>Soyad: @Model.UserDetail.Surname </p>
+                    <p>Qeydiyyat tarixi :@Model.UserDetail.Created </p>
+                    <p>Rol : @Model.UserDetail.RoleName </p>
+                    <p>Status : @(Model.UserDetail.StatusId == (byte)UserStatusEnum.Active?"Aktiv":"Deaktiv") </p>
+
+                    @if (Model.UserDetail.StatusId == (byte)UserStatusEnum.Active)
+                    {
+                        <button class="btn btn-danger mb-2 change-status">Deaktiv et</button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-success mb-2 change-status">Aktiv et</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="animated-underline-contact" role="tabpanel" aria-labelledby="animated-underline-contact-tab">
+            <div class="row invoice layout-top-spacing">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="app-hamburger-container">
+                        <div class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu chat-menu d-xl-none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
+                    </div>
+                    <div class="doc-container">
+                        <div class="tab-title">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="search">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <ul class="nav nav-pills order-wrapper inv-list-container d-block" id="pills-tab" role="tablist">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="invoice-container">
+                            <div class="invoice-inbox">
+
+                                <div class="inv-not-selected">
+                                    <p>Siyahıdan seçmək üçün klikləyin.</p>
+                                </div>
+
+                                <div class="invoice-header-section">
+                                    <h4 class="inv-number"></h4>
+                                    <div class="invoice-action">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer action-print" data-toggle="tooltip" data-placement="top" data-original-title="Reply"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                                    </div>
+                                </div>
+
+                                <div id="ct" class="">
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="inv--thankYou">
+                                <div class="row">
+                                    <div class="col-sm-12 col-12">
+                                        <p class="">Bizi seçdiyiniz üçün təşəkkürlər.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="animated-underline-kitchen" role="tabpanel" aria-labelledby="animated-underline-kitchen">
+            <div class="col-xl-12 col-lg-12 col-sm-12 layout-spacing">
+                <div class="widget-content my-4 widget-content-area">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active m"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                   
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="widget-content widget-content-area br-6">
+                    <div class="table-responsive mb-4 mt-4">
+                        <table id="range-search" class="display table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Şəkil</th>
+                                    <th>Ad</th>
+                                    <th>Qiymət</th>
+                                    <th>Endirim</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*@foreach (var item in Model.Users)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Surname</td>
+                                            <td>@item.Email</td>
+                                            <td>
+                                                @if (item.StatusId == (byte)UserStatusEnum.Active)
+                                                {
+                                                    <span class="badge badge-success"> Aktiv </span>
+                                                }
+                                                else if (item.StatusId == (byte)UserStatusEnum.Deactive)
+                                                {
+                                                    <span class="badge badge-danger"> Deaktiv </span>
+                                                }
+                                            </td>
+                                            <td class="text-center"><a href="@Url.Action("Detail","User",new  { userId = item.Id })"><button class="btn btn-primary mb-4 mr-2 btn-sm">Ətraflı</button></a></td>
+                                        </tr>
+                                    }*@
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Şəkil</th>
+                                    <th>Ad</th>
+                                    <th>Qiymət</th>
+                                    <th>Endirim</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Links{
+    <link href="~/staticfiles/assets/css/components/custom-carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/staticfiles/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="~/staticfiles/assets/css/components/tabs-accordian/custom-tabs.css" rel="stylesheet" type="text/css" />
+    <link href="~/staticfiles/assets/css/apps/invoice.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/staticfiles/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/staticfiles/plugins/table/datatable/dt-global_style.css">
+
+
+    <link href="~/staticfiles/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <script src="~/staticfiles/plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="~/staticfiles/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/staticfiles/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="~/staticfiles/assets/css/components/custom-sweetalert.css" rel="stylesheet" type="text/css" />
+}
+
+
+@section Scripts{
+    <script src="~/staticfiles/plugins/blockui/jquery.blockUI.min.js"></script>
+
+    <script src="~/staticfiles/plugins/blockui/custom-blockui.js"></script>
+    <script src="~/staticfiles/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="~/staticfiles/plugins/sweetalerts/custom-sweetalert.js"></script>
+    <script src="~/staticfiles/assets/js/apps/invoice.js"></script>
+    <script>/* Custom filtering function which will search data in column four between two values */
+        //$.fn.dataTable.ext.search.push(
+        //    function (settings, data, dataIndex) {
+        //        var name = parseInt($('#min').val(), 10);
+        //        var surname = parseInt($('#max').val(), 10);
+        //        var email = "";
+        //        var role = "";
+        //        var status = "";
+
+        //        //var age = parseFloat(data[3]) || 0; // use data for the age column
+
+        //        //if ((isNaN(min) && isNaN(max)) ||
+        //        //    (isNaN(min) && age <= max) ||
+        //        //    (min <= age && isNaN(max)) ||
+        //        //    (min <= age && age <= max)) {
+        //        //    return true;
+        //        //}
+        //        return false;
+        //    }
+        //);
+        $(document).ready(function () {
+            var table = $('#range-search').DataTable({
+                "oLanguage": {
+                    "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                    "sInfo": "Göstərilən səhifə _PAGE_ / _PAGES_",
+                    "sLengthMenu": "Nəticə :  _MENU_",
+                },
+                "stripeClasses": [],
+                "lengthMenu": [7, 10, 20, 50],
+                "pageLength": 7
+            });
+
+
+
+            $('.change-status').on('click', function () {
+                swal({
+                    title: 'Əminsinizmi?',
+                    text: "Bu əməliyyatı geri qaytarmaq üçün yenidən statusu dəyişə bilərsiniz!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yadda saxla',
+                    padding: '2em'
+                }).then(function (result) {
+                    if (result.value) {
+
+                        $.blockUI({
+                            message: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader spin mr-2"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>',
+                            fadeIn: 800,
+
+                            overlayCSS: {
+                                backgroundColor: '#1b2024',
+                                opacity: 0.8,
+                                zIndex: 1200,
+                                cursor: 'wait'
+                            },
+                            css: {
+                                border: 0,
+                                color: '#fff',
+                                zIndex: 1201,
+                                padding: 0,
+                                backgroundColor: 'transparent'
+                            }
+                        });
+
+                        $.ajax({
+                            url: "/istifadeciler/status/" + @Model.UserDetail.Id,
+                            type: "POST",
+                            success: function (res) {
+                                if (res.status == 200) {
+                                    $.unblockUI();
+
+                                    swal(
+                                        'Status dəyişdi!',
+                                        'Qeyd olunan istifadəçinin statusu dəyişdirildi.',
+                                        'success'
+                                    );
+
+                                    setTimeout(function () {
+                                        window.location.reload();
+                                    }, 2000)
+                                }
+                                else {
+                                    swal(
+                                        'Xəta baş verdi!',
+                                        'Status dəyişdirilən zaman xəta baş verdi.',
+                                        'error'
+                                    )
+                                }
+                            },
+                            error: function () {
+                                $.unblockUI();
+                                swal(
+                                    'Xəta baş verdi!',
+                                    'Gözlənilməz xəta baş verdi.',
+                                    'error'
+                                )
+                            }
+                        })
+
+                    }
+                })
+            })
+            const ID = @Model.UserDetail.Id
+                $("#animated-underline-contact-tab").click(function () {
+                    $(".order-wrapper").empty();
+
+                    $.blockUI({
+                        message: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader spin mr-2"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>',
+                        fadeIn: 800,
+
+                        overlayCSS: {
+                            backgroundColor: '#1b2024',
+                            opacity: 0.8,
+                            zIndex: 1200,
+                            cursor: 'wait'
+                        },
+                        css: {
+                            border: 0,
+                            color: '#fff',
+                            zIndex: 1201,
+                            padding: 0,
+                            backgroundColor: 'transparent'
+                        }
+                    });
+
+                    $.ajax({
+                        url: "/istifadeciler/" + @Model.UserDetail.Id+"/sifarisler",
+                        type: "GET",
+                        success: function (res) {
+                            if (res.status == 200) {
+                                $.unblockUI();
+
+                                for (let r of res.data) {
+                                    let name = r.cookUserId == ID ? r.cookName : r.orderUserName;
+                                    let surname = r.cookUserId == ID ? r.cookSurname : r.orderUserSurname;
+
+
+                                    let nname = r.cookUserId == ID ? r.orderUserName : r.cookName;
+                                    let ssurname = r.cookUserId == ID ? r.orderUserSurname : r.cookSurname;
+                                    let element = `<li class="nav-item">
+                                                    <div class="nav-link list-actions order-item" id="invoice-${r.id}" data-invoice-id="${r.id}">
+                                                        <div class="f-m-body">
+                                                            <div class="f-head">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                                            </div>
+                                                            <div class="f-body">
+                                                                <p class="invoice-number">Çek #${r.id}</p>
+                                                                <p class="invoice-customer-name"><span></span> ${nname} ${ssurname}</p>
+                                                                <p class="invoice-generated-date">Tarix: ${r.orderDate}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>`;
+
+                                    $(".order-wrapper").append(element);
+
+                                    let deliveryDate = r.deliveryDate == null ? "Tarix yoxdur." : r.deliveryDate;
+                                    let discountPercentage = r.discountPercentage == undefined ? 0 : r.discountPercentage;
+
+                                    let invoice = `<div class="invoice-${r.id}">
+                                                <div class="content-section animated animatedFadeInUp fadeInUp">
+
+                                                    <div class="row inv--head-section">
+
+                                                        <div class="col-sm-6 col-12">
+                                                            <h3 class="in-heading">Çeklər</h3>
+                                                        </div>
+                                                        <div class="col-sm-6 col-12 align-self-center text-sm-right">
+                                                            <div class="company-info">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hexagon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                                                                <h5 class="inv-brand-name">Birpors.az</h5>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row inv--detail-section">
+
+                                                        <div class="col-sm-7 align-self-center">
+                                                            <p class="inv-to">Çek</p>
+                                                        </div>
+                                                        <div class="col-sm-5 align-self-center  text-sm-right order-sm-0 order-1">
+                                                            <p class="inv-detail-title">Aşpaz : ${r.cookName} ${r.cookSurname}</p>
+                                                        </div>
+
+                                                        <div class="col-sm-7 align-self-center">
+
+                                                        </div>
+                                                        <div class="col-sm-5 align-self-center  text-sm-right order-2">
+                                                            <p class="inv-list-number"><span class="inv-title">Çek nömrə : </span> <span class="inv-number">${r.id}</span></p>
+                                                            <p class="inv-created-date"><span class="inv-title">Sifariş tarix : </span> <span class="inv-date">${r.orderDate}</span></p>
+                                                            <p class="inv-due-date"><span class="inv-title">Sifarişin bitmə tarixi : </span> <span class="inv-date">${deliveryDate}</span></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row inv--product-table-section">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead class="">
+                                                                        <tr>
+                                                                            <th scope="col">S.No</th>
+                                                                            <th scope="col">Məhsul</th>
+                                                                            <th class="text-right" scope="col">Say</th>
+                                                                            <th class="text-right" scope="col">Qiymət</th>
+                                                                            <th class="text-right" scope="col">Toplam</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="ordered-foods">
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-4">
+                                                        <div class="col-sm-5 col-12 order-sm-0 order-1">
+                                                            <div class="inv--payment-info">
+                                                                <div class="row">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-7 col-12 order-sm-1 order-0">
+                                                            <div class="inv--total-amounts text-sm-right">
+                                                                <div class="row">
+                                                                    <div class="col-sm-8 col-7">
+                                                                                <p class=" discount-rate">Endirim : <span class="discount-percentage">${discountPercentage}%</span> </p>
+                                                                    </div>
+
+                                                                    <div class="col-sm-8 col-7 grand-total-title">
+                                                                        <h4 class="">Toplam : </h4>
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-5 grand-total-amount">
+                                                                        <h4 class="">${r.totalPrice}</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>`;
+
+                                    $("#ct").append(invoice);
+                                }
+                                console.log(res.data);
+                            }
+                            else {
+                                $.unblockUI();
+                                swal(
+                                    'Xəta baş verdi!',
+                                    'Gözlənilməz xəta baş verdi.',
+                                    'error'
+                                )
+                            }
+                        },
+                        error: function () {
+                            $.unblockUI();
+                            swal(
+                                'Xəta baş verdi!',
+                                'Gözlənilməz xəta baş verdi.',
+                                'error'
+                            )
+                        }
+                    })
+                });
+
+
+            $("#animated-underline-kitchen-tab").click(function () {
+
+                $(".carousel-inner").empty();
+                $.blockUI({
+                    message: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader spin mr-2"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>',
+                    fadeIn: 800,
+
+                    overlayCSS: {
+                        backgroundColor: '#1b2024',
+                        opacity: 0.8,
+                        zIndex: 1200,
+                        cursor: 'wait'
+                    },
+                    css: {
+                        border: 0,
+                        color: '#fff',
+                        zIndex: 1201,
+                        padding: 0,
+                        backgroundColor: 'transparent'
+                    }
+                });
+
+                $.ajax({
+                    url: "/istifadeciler/" + ID + "/metbex",
+                    type: "GET",
+                    success: function (res) {
+                        if (res.status == 200) {
+                            $.unblockUI();
+                            console.log(res.data)
+                            let slider = 0;
+                            for (let ki of res.data.kitchenImages) {
+                                let active = slider == 0 ? "active" : "";
+                                let element = ` <div class="carousel-item ${active}">
+                                                        <img class="d-block w-100" src="${ki}" alt="First slide">
+                                                    </div>
+                                                   `;
+
+                                $(".carousel-inner").append(element);
+                                slider++;
+                            }
+
+
+                            for (let kf of res.data.kitchenDetails) {
+                               table.row.add([
+                                   `${kf.kitchenDetailId}`,
+                                    `<div class="avatar avatar-xl">
+                                                                           <img alt="avatar" style="width:50px;height:50px" src="${kf.mainImage}" class="rounded-circle" />
+                                                                     </div>`,
+                                    `${kf.name}`,
+                                    `${kf.price}`,
+                                    `${kf.discountPercentage}`
+                               ]).draw(false)
+                                //let element = ` <tr>
+                                //                    <td>${kf.kitchenDetailId}</td>
+                                //                            <td><div class="avatar avatar-xl">
+                                //                                   <img alt="avatar" src="${kf.mainImage}" class="rounded-circle" />
+                                //                             </div>
+                                //                                </td>
+                                //                    <td>${kf.name}</td>
+                                //                    <td>${kf.price}ət</td>
+                                //                    <td>${kf.discountPercentage}</td>
+                                //                </tr>`;
+
+                                //$("#range-search tobdy").append(element);
+
+                            }
+
+                        }
+                    },
+                    error: function () {
+                        $.unblockUI();
+                        swal(
+                            'Xəta baş verdi!',
+                            'Gözlənilməz xəta baş verdi.',
+                            'error'
+                        )
+                    }
+                })
+
+            });
+
+
+            $(document).on("click", ".order-item", function () {
+                let orderId = $(this).attr("data-invoice-id");
+
+                $.blockUI({
+                    message: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader spin mr-2"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>',
+                    fadeIn: 800,
+
+                    overlayCSS: {
+                        backgroundColor: '#1b2024',
+                        opacity: 0.8,
+                        zIndex: 1200,
+                        cursor: 'wait'
+                    },
+                    css: {
+                        border: 0,
+                        color: '#fff',
+                        zIndex: 1201,
+                        padding: 0,
+                        backgroundColor: 'transparent'
+                    }
+                });
+
+                $.ajax({
+                    url: "/istifadeciler/" + @Model.UserDetail.Id + "/sifarisler/" + orderId,
+                    type: "GET",
+                    success: function (res) {
+                        if (res.status == 200) {
+                            $.unblockUI();
+                            console.log(res.data);
+
+
+
+                            for (let r of res.data) {
+
+
+
+
+                                let food = `   <tr>
+                                                                            <td>${r.productId}</td>
+                                                                            <td>${r.foodName}</td>
+                                                                            <td class="text-right">${r.discountPercentage}</td>
+                                                                            <td class="text-right">${r.price}</td>
+                                                                            <td class="text-right">${r.totalPrice}</td>
+                                                                        </tr>`;
+
+
+                                $(`.invoice-${r.orderId} tbody`).append(food);
+                            }
+
+                        }
+                        else {
+                            $.unblockUI();
+                            swal(
+                                'Xəta baş verdi!',
+                                'Gözlənilməz xəta baş verdi.',
+                                'error'
+                            )
+                        }
+                    },
+                    error: function () {
+                        $.unblockUI();
+                        swal(
+                            'Xəta baş verdi!',
+                            'Gözlənilməz xəta baş verdi.',
+                            'error'
+                        )
+                    }
+                })
+            })
+        });
+        
+                    
+                    </script>
+
+    <script>
+
+      
+    </script>
+}

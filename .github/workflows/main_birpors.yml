@@ -54,4 +54,4 @@ jobs:
           app-name: 'birpors'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_546282EAF6BB4EE597561013EEB84AE2 }}
-          package: Birpors.API
+          package: Birpors.API/Birpors.API.csproj
